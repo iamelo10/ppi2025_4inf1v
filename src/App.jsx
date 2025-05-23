@@ -1,5 +1,6 @@
-import "./style/"
-import
+import "./style/theme.css";
+import "./style/global.css";
+
 export function App() {
   return (
     <div>
