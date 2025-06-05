@@ -1,0 +1,64 @@
+.grid {
+  padding: 3rem;
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+}
+
+.card {
+  height: 30rem;
+  background-color: var(--primary);
+  color: var(--primary-contrast);
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0.5rem 0.5rem 1rem var(--primary-dark);
+  font-size: 3rem;
+  text-align: center;
+}
+
+.container {
+  display: grid;
+
+  grid-template-areas:
+    "header1 header1"
+    "aside header2"
+    "aside main"
+    "footer footer";
+
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 20rem 10rem auto 20rem;
+
+  @media (max-width: 1200px) {
+    grid-template-areas:
+      "header1"
+      "header2"
+      "main"
+      "footer";
+
+    grid-template-columns: 1fr;
+  }
+}
+
+.header1 {
+  grid-area: header1;
+  background-color: dark blue;
+}
+
+.header2 {
+  grid-area: header2;
+  background-color: red;
+}
+
+.aside {
+  grid-area: aside;
+  background-color: green;
+
+  @media (max-width: 1200px) {
+    display: none;
+  }
+}
+
+.footer {
+  grid-area: footer;
+  background-color: lightgray;
+}
