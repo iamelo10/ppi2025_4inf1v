@@ -2,7 +2,8 @@
   padding: 3rem;
   display: grid;
   gap: 3rem;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-template-rows: repeat(auto-fit, min_content);
 }
 
 .card {
@@ -14,51 +15,81 @@
   box-shadow: 0.5rem 0.5rem 1rem var(--primary-dark);
   font-size: 3rem;
   text-align: center;
+  justify-content: center;
 }
 
 .container {
   display: grid;
 
   grid-template-areas:
-    "header1 header1"
-    "aside header2"
-    "aside main"
-    "footer footer";
+    "header1 header1 header1"
+    "aside1 header2 aside2"
+    "aside main aside2"
+    "aside footer2 aside2"
+    "footer2 footer2 aside2";
 
-  grid-template-columns: 1fr 3fr;
-  grid-template-rows: 20rem 10rem auto 20rem;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 1rem 3rem auto 3rem 2rem;
 
   @media (max-width: 1200px) {
     grid-template-areas:
-      "header1"
-      "header2"
-      "main"
-      "footer";
+    "header1 header1 header1"
+    "aside1 header2 aside2"
+    "aside main aside2"
+    "aside footer2 aside2"
+    "footer2 footer aside2";
 
-    grid-template-columns: 1fr;
+  rid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 1rem 3rem auto 3rem 2rem;
+  
   }
 }
 
 .header1 {
   grid-area: header1;
-  background-color: dark blue;
+  /*align-items: start;*/
+  background-color: dark rgb(214, 24, 24);
 }
 
 .header2 {
   grid-area: header2;
-  background-color: red;
+  background-color: blue;
+ /* text-align: center;*/
+}
+
+.main {
+  grid-area: main;
+  /*align-content: center;*/
+  background-color: rgb(255, 255, 255);
+
 }
 
 .aside {
   grid-area: aside;
-  background-color: green;
-
+  /*justify-items: start;*/
+  background-color: rgb(214, 253, 73);
+  
   @media (max-width: 1200px) {
-    display: none;
+     display: none; 
+  }
+}
+
+.aside2 {
+  grid-area: aside2;
+  background-color: rgb(116, 129, 0);
+   /*justify-items: end; */
+  @media (max-width: 1200px) {
+   display: none;
   }
 }
 
 .footer {
   grid-area: footer;
-  background-color: lightgray;
+  /*align-items: end;*/
+  background-color: rgb(0, 255, 42);
+}
+
+.footer2 {
+  grid-area: footer2;
+  background-color: rgb(250, 96, 255);
 }

@@ -6,6 +6,8 @@ export function MyGrid({title}) {
         <header className={style.header1}></header>
         <header className={style.header2}></header>
         <aside  className={style.aside}></aside>
+        <aside  className={style.aside2}></aside>
+        <main  className={style.main}></main>
         <div className={style.main}>
             <div className={style.grid}>
                 <div className={style.card}>
@@ -31,6 +33,7 @@ export function MyGrid({title}) {
             </div>
         </div>
         <footer className={style.footer}></footer>
+        <footer className={style.footer2}></footer>
     </div>
   );
 }
