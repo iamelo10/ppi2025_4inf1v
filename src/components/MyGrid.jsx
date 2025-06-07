@@ -1,13 +1,13 @@
 import style from './MyGrid.module.css';
 
-export function MyGrid({title}) {
+export function MyGrid() {
   return (
     <div className={style.container}>
-        <header className={style.header1}></header>
-        <header className={style.header2}></header>
-        <aside  className={style.aside}></aside>
-        <aside  className={style.aside2}></aside>
-        <main  className={style.main}></main>
+        <header className={style.header1}/>
+        <header className={style.header2}/>
+        <aside  className={style.aside}/>
+        <aside  className={style.aside2}/>
+        <main  className={style.main}/>
         <div className={style.main}>
             <div className={style.grid}>
                 <div className={style.card}>
@@ -32,8 +32,8 @@ export function MyGrid({title}) {
                 </div>
             </div>
         </div>
-        <footer className={style.footer}></footer>
-        <footer className={style.footer2}></footer>
+        <footer className={style.footer}/>
+        <footer className={style.footer2}/>
     </div>
   );
 }
