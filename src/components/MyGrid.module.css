@@ -13,10 +13,13 @@
   padding: 1rem;
   border-radius: 1rem;
   box-shadow: 0.5rem 0.5rem 1rem var(--primary-dark);
-  font-size: 3rem;
+  font-size: 1rem;
   text-align: center;
-  justify-content: center;
+  font-style: italic;
+  justify-content: flex-start;
+  
 }
+
 
 .container {
   display: grid;
@@ -29,32 +32,26 @@
   grid-template-columns: 1fr 1fr auto;
   grid-template-rows:  10rem auto 10rem;
 
-   /*@media (max-width: 1200px) {
-    grid-template-areas:
-    "header1 header1 header1"
-    "aside header2 header2"
-    "aside main main"
-    "aside footer footer"
-    "footer2 footer2 footer2";
 
-  grid-template-columns: 1fr 3fr 1fr;
-  grid-template-rows: 10rem 5rem auto 5rem 10rem;*/
-
-  /*@media (max-width: 768px) {
+  @media (max-width: 768px) {
     grid-template-areas:
-    "header1"
+    "header"
     "main"
     "footer"; 
 
   grid-template-columns: 1fr;
   grid-template-rows: 10rem auto 10rem;
   } 
-}*/
 }
+
 
 .header {
   grid-area: header;
   background-color: rgb(18, 22, 247);
+  font-size: 2rem;
+  font-style: italic;
+  color: white;
+  
 }
 
 
@@ -72,7 +69,13 @@
 
   font-style: italic;
   font-size: 2rem;
-  flex-direction: "flex-end";
+  
+ /*text-align: left; nao muda o text*/
+
+ justify-content: flex;
+ /*display: flex; /*quando eu coloco o card vai para o lado esquerdo mas fica grande*/ 
+
+  
 }
 
 
