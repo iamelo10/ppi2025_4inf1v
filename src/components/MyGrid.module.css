@@ -29,7 +29,7 @@
     "main main main"
     "footer footer footer";
 
-  grid-template-columns: 1fr 1fr auto;
+  grid-template-columns: 1fr auto 1fr;
   grid-template-rows:  10rem auto 10rem;
 
 
@@ -69,8 +69,7 @@
 
   font-style: italic;
   font-size: 2rem;
-  
- /*text-align: left; nao muda o text*/
+
 
  justify-content: flex;
  /*display: flex; /*quando eu coloco o card vai para o lado esquerdo mas fica grande*/ 
@@ -78,4 +77,8 @@
   
 }
 
-
+.icons{
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
