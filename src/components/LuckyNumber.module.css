@@ -1,0 +1,15 @@
+import { useState } from "react";
+
+
+export function luckyNumber() {
+ 
+    const [luckyNumber,setLuckyNumber] = useState(0);
+
+
+
+    functition handleClick() {
+        setLuckyNumber(luckynumber +1);
+        console.log("Lucky Number is: " + luckyNumber);
+    };
+ 
+}
