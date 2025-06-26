@@ -1,15 +1,27 @@
-import { useState } from "react";
-
-
-export function luckyNumber() {
- 
-    const [luckyNumber,setLuckyNumber] = useState(0);
-
-
-
-    functition handleClick() {
-        setLuckyNumber(luckynumber +1);
-        console.log("Lucky Number is: " + luckyNumber);
-    };
- 
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    height: 100vh;
+    font-size: 3rem;
+    background-color: var(--primary);
 }
+
+.button {
+    background-color: var(--primary-dark);
+    color: var(--primary-contrast);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-weight: bolder;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+    background-color: var(--primary-light);
+    transform: scale(1.05);
+    
+}
+
