@@ -29,10 +29,12 @@ export function LuckyNumber() {
 
       {message && <p>{message}</p>}
       {array.length > 0 && (
-        <div>
+        <><div>
           <h3>Números Sorteados arrays: </h3>
-          <p>[{array}]</p>
-        </div>
+          <p>[{array.toString()}]</p>
+        </div><button className={styles.button} onClick={() => setArray([])}>
+            Limpar Números Sorteados
+          </button></>
       )}
 
     </div>
