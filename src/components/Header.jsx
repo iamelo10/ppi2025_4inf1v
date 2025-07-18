@@ -6,8 +6,10 @@ export function Header() {
       <div className={styles.container}></div>
       <header className={styles.header}></header>
       <div className={styles.header}>
-        
-        <h1 align="center"> ATIVIDADE CONTADOR</h1>
+        <h1>TJA SHOP</h1>
+       <Link to="/cart" className={style.cartLink}>
+          Cart
+        </Link>
       </div>
     </header>
   );
