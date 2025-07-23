@@ -4,12 +4,18 @@
   align-items: center;
   padding: 2rem;
   gap: 2rem;
+
 }
 
 .productList {
   padding: 1rem 3rem;
   display: grid;
-  gap: 3rem;
+  gap: 5rem; /* aumente o valor aqui */
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   grid-template-rows: repeat(auto-fit, min-content);
+  background: white;
+  border-radius: 2rem;
+  flex-direction: space-around;
+  align-items: center;
+  justify-content: center;
 }

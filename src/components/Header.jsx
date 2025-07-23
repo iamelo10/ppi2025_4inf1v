@@ -10,9 +10,8 @@ export function Header({ cart }) {
         <div className={style.cartInfo}>
           <ShoppingBasket size={32} />
           <p>
-            Total: ${" "}
-            {cart
-              .reduce((total, product) => total + product.price, 0)
+            Total: R$ {cart
+              .reduce((total, product) => total + product.price * product.quantity, 0)
               .toFixed(2)}
           </p>
         </div>

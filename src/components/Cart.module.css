@@ -5,6 +5,9 @@
     font-size: 2rem;
     padding: 1rem;
     align-items: center;
+     flex-direction: space-between;
+    display: flex;  
+
    
 }
 
@@ -12,9 +15,11 @@
     gap: 1rem;
     width: 100%;
     background-color: white;
+    
     color: black;
     padding: 1rem;
     border-radius: 1rem;
     box-shadow: 0.5rem 0.5rem 1rem var(--color2);
+   
 }
 
