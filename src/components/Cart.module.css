@@ -1,7 +1,19 @@
 .cart {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 4rem;
+    font-size: 2rem;
     padding: 1rem;
     align-items: center;
 }
+
+.cartList {
+    gap: 1rem;
+    width: 100%;
+    background-color: var(--color2);
+    color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0.5rem 0.5rem 1rem var(--color2);
+}
+

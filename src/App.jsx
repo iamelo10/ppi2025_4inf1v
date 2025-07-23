@@ -3,7 +3,8 @@ import "./style/global.css";
 import { ProductList } from "./components/ProductList";
 import { Header } from "./components/Header";
 import { useState } from "react";
-import { Product } from "./components/Product";
+import { Route, Routes } from "react-router";
+import { Cart } from "./components/Cart";
 
 export default function App() {
   
@@ -16,7 +17,6 @@ export default function App() {
   return (
     //React Fragment
     <>
-    <Product />
       <Header cart={cart} />
       <Routes>
         <Route path="/" element={<ProductList addToCart={addToCart} />} />

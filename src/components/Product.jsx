@@ -1,4 +1,4 @@
-import style from "./Product.Module.css";
+import style from "./Product.module.css";
 
 export function Product({ product, addToCart }) {
   return (

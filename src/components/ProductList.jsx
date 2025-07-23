@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
 import style from "./ProductList.module.css";
 import { CircularProgress } from "@mui/material";
-import { ShoppingCart } from "lucide-react"; //trocar
+import { Product } from "./Product";
 
-
-export function ProductList() {
+export function ProductList({ addToCart }) {
   var category = "smartphones";
   var limit = 10;
   var apiUrl = `https://dummyjson.com/products/category/${category}?limit=${limit}&select=id,thumbnail,title,price,description`;
@@ -25,47 +24,23 @@ export function ProductList() {
         setLoading(false);
       }
     }
-
     fetchProducts();
   }, []);
 
   return (
     <div className={style.container}>
-      
-      <div className={style.header}>
-      <h1 >TJA Megastore</h1>
+      <div className={style.productList}>
+        {products.map((product) => (
+          <Product key={product.id} product={product} addToCart={addToCart} />
+        ))}
       </div>
-
-      {products.map((product) => (
-        <div key={product.id} className={style.productCard}>
-          <img
-            src={product.thumbnail}
-            alt={product.title}
-            className={style.productImage}
-          />
-          <h2 className={style.productTitle}>{product.title}</h2>
-          <p className={style.productPrice}>Price: ${product.price}</p>
-
-          <p className={style.productDescription}>{product.description}</p>
-           <div className={style.cart}>
-          <button className={style.button}> <ShoppingCart /> Adicionar ao carrinho</button>
-           </div>
-
-        </div>
-        
-
-      ))}
-
       {loading && (
-
-
         <div>
           <CircularProgress
             thickness={5}
-            style={{ margin: "2rem auto", display: "block" }}
+            style={{ margin: "5rem auto", display: "block" }}
             sx={{ color: "#001111" }}
           />
-
           <p>Loading products...</p>
         </div>
       )}
