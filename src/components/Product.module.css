@@ -5,10 +5,13 @@
   padding: 2rem;
   text-align: center;
   background-color: white;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-template-rows: repeat(auto-fit, min-content);
 }
 
 .productImage {
   width: 100%;
+  max-width: 30rem;
   border-radius: 0.5rem;
 }
 

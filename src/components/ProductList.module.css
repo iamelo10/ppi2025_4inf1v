@@ -11,6 +11,28 @@
   padding: 1rem 3rem;
   display: grid;
   gap: 3rem;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   grid-template-rows: repeat(auto-fit, min-content);
+}
+
+.searchInput{
+  width: 100%;
+  max-width: 40rem;
+  padding: 1rem;
+  font-size: 2rem;
+  border: 0.1rem solid var(--primary);
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 1rem rgba(250, 4, 4, 0.877);
+}
+
+.clearButton {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  font-size: 2rem;
+    box-shadow: 0 0 1rem rgba(250, 4, 4, 0.877);
 }
