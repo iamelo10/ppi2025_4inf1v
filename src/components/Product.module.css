@@ -1,28 +1,26 @@
 .productCard {
-  border: 0.25rem solid var(--color5);
+  border: 0.25rem solid var(--primary);
   border-radius: 5rem;
+  box-shadow: 0 0 1rem rgba(250, 4, 4, 0.877);
   padding: 2rem;
   text-align: center;
-  background-color: var(--color3);
-  display: grid;
+  background-color: white;
 }
 
 .productImage {
   width: 100%;
   border-radius: 0.5rem;
-
 }
 
 .productTitle {
   font-size: 3rem;
   font-weight: bold;
   margin: 0.5rem 0;
-  color: black
 }
 
 .productDescription {
   font-size: 2rem;
-  color: black;
+  color: var(--primary-dark);
 }
 
 .productPrice {
@@ -30,10 +28,10 @@
   font-weight: bold;
   margin: 2rem 0;
 }
-/*botao*/
+
 .productButton {
-  background-color: var(--color5);
-  color: var(--gray-900);
+  background-color: var(--primary);
+  color: green;
   border: none;
   padding: 1rem 2rem;
   border-radius: 1rem;
@@ -41,7 +39,7 @@
   font-size: 2rem;
 }
 
-/*degrade do botao*/
 .productButton:hover {
-  background-color: var(--primary-dark);
+  background-color: rgb(255, 71, 71);
+  color: white;
 }
