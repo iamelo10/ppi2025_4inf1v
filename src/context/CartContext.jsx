@@ -1,4 +1,5 @@
 import { useState, useEffect, createContext } from "react";
+import { supabase } from "../utils/supabase";   
 
 export const CartContext = createContext({
   // Context to manage the products state
